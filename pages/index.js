@@ -5,13 +5,14 @@ export default function Home() {
   return (
     <div >
       <Head>
-        <title>Coming Soon</title>
+        <title>Paprika | Coming Soon</title>
         <link rel="icon" href="/png.png" />
       </Head>
   
       <section className={styles.comingSoon}>
+      <img src="/png.png" className={styles.img}/>
       <div className={styles.hero}>
-        <img src="/png.png" className={styles.img}/>
+       
         <h1 className={styles.text}>Coming Soon</h1>
         <p className={styles.p}>We are launching soon, please stay tuned.</p>
         <hr className={styles.hr} />
