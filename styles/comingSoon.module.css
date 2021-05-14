@@ -1,83 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Satisfy&display=swap");
 
-.comingSoon{
-    width: 100vw;
-    background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0,0,0,0.5)),url('../public/coming-soon.png');
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Cairo', sans-serif;
+.text-right {
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.opening_soon_info {
+  background: url("../public/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  display: grid;
+  align-items: center;
+  padding: 0 0 30px;
+}
+.opening_soon_info:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.opening_soon_info .header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 10px;
+}
+.opening_soon_info a.brand_logo {
+  position: relative;
+  top: -50px;
+}
+
+.opening_soon_info a.brand_logo img {
+  width: 130px;
+}
+
+.opening_soon_info .coming_back {
+  margin: 80px auto 60px;
+  max-width: 600px;
+  text-align: center;
+  padding: 1em 0;
+}
+.opening_soon_info h1 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 400;
+  color: #ce4c42;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  font-family: "Satisfy", cursive;
+}
+.opening_soon_info p.t_text {
+  line-height: 26px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+  font-size: 30px;
+  color: white;
+  font-family: "Satisfy", cursive;
+}
+
+.opening_soon_info div.info {
+  display: flex;
+  justify-content: space-between;
+  width: 57%;
+  margin: 0 auto;
+  align-items: center;
+}
+.opening_soon_info div.info span {
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+}
+
+.opening_soon_info div.info svg {
+  width: 20px;
+  color: #ce4c42;
+  top: 3px;
+  position: relative;
+  margin-left: 0px;
+}
+
+@media (max-width: 500px) {
+  .opening_soon_info a.brand_logo {
+    top: -20px;
   }
- 
-.hero{
-    top: 45%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    color: #fff;
-    text-align: center;
-}
-
-.img{
-    width: 10%;
-}
-.text{
-    font-size: 70px;
-    letter-spacing: 15px;
-    font-family: 'Dancing Script', cursive;
-}
-
-.hr{
-    width: 50%;
-    margin: 30px auto;
-    border: 1.5px solid #fff;
-}
-.p{
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-
-@media screen and (max-width:800px){
- 
-    .img{
-        width: 20%;
-    }
-    .text{
-        font-size: 50px;
-        letter-spacing: 12px;
-        font-family: 'Dancing Script', cursive;
-    }
-    
-    .hr{
-        width: 50%;
-        margin: 30px auto;
-        border: 1.5px solid #fff;
-    }
-    .p{
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width:470px){
- 
-    .img{
-        width: 30%;
-    }
-    .text{
-        font-size: 40px;
-        letter-spacing: 15px;
-        font-family: 'Dancing Script', cursive;
-    }
-    
-    .hr{
-        width: 50%;
-        margin: 30px auto;
-        border: 1.5px solid #fff;
-    }
-    .p{
-        font-size: 14px;
-    }
+  .opening_soon_info h1 {
+    font-size: 40px;
+  }
+  .opening_soon_info div.info {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
 }
